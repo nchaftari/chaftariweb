@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import axios from '../../../node_modules/axios';
+import axios from 'axios';
 import { error } from 'protractor';
 
 
