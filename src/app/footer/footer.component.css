@@ -1,5 +1,14 @@
-.borderRadius
+footer {
+  /* position :absolute; */
+  background-color: transparent !important;
+  bottom : 0;
+  width: 100%;
+  color: white;
+
+}
+.footerChaftari
 {
+  background-color: gray !important;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 
 }

@@ -1,11 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-footer {
-  position : absolute;
-  bottom : 0;
-  width: 100%;
-
-}
 body{
-  background-color: beige;
+  background-color: rgb(133, 160, 160);
 }
