@@ -26,6 +26,13 @@ try {
 } catch (error) {
   // this.error = error;
 }
+
+
+  }
+
+  nextCarousel()
+  {
+    // document.getElementById('carousel').carousel('next')
   }
 
 

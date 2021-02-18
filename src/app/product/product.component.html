@@ -1,11 +1,6 @@
 <div class="col-xl main">
-<!-- <ul>
-  <li *ngFor="let product of products">
-    <div>
-      {{product.productName}}
-    </div>
-  </li>
-</ul> -->
+
+
 
 <ul class="list-group shadow">
 
@@ -29,9 +24,16 @@
                     </div>
                   </div>
 
-                  <img src="http://localhost:1337{{product.productImage[0].formats.small.url}}" alt="" width="200" class="ml-lg-5 order-1 order-lg-2">
+                  <img src="http://localhost:1337{{product.productImage[0].formats.small.url}}" alt="" width="100" class="ml-lg-5 order-1 order-lg-2">
                 </div>
+
                 <!-- End -->
               </li>
           </ul>
-</div>
+
+
+<script>
+  $('.carousel').carousel('cycle',{
+  interval: 2000
+})
+</script>
