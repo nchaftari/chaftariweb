@@ -8,10 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingCarouselComponent } from './landing-carousel/landing-carousel.component';
 import { HomeComponent } from './home/home.component';
+import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     ProductComponent,
     CarouselComponent,
     LandingCarouselComponent,
-    HomeComponent
+    HomeComponent,
+    WelcomeBannerComponent
   ],
   imports: [
     BrowserModule,

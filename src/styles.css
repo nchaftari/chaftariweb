@@ -1,5 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
+* {
+  font-family:'Times New Roman', Times, serif /* Replace with your custom font */, sans-serif !important;
+  /* Add !important to overwrite all elements */
+}
 body{
   background-color: rgb(241, 241, 241);
 }

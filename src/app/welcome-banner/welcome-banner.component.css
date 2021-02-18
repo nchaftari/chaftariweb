@@ -1,0 +1,26 @@
+.welcomeMain{
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.welcomeText
+{
+  margin: auto;
+  font-size: 3rem;
+  font-weight: 600;
+  width: 50%;
+
+}
+.welcomeSubText
+{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  width: 40%;
+  margin: auto;
+
+}
+.shopBtn
+{
+  margin-top: 1rem;
+}
