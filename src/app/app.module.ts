@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LandingCarouselComponent } from './landing-carousel/landing-carousel.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    CarouselComponent
+    CarouselComponent,
+    LandingCarouselComponent
   ],
   imports: [
     BrowserModule,

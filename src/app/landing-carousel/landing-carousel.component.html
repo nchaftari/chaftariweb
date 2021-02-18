@@ -1,0 +1,13 @@
+<carousel id="slideshow" [height]="400" [cellWidth]="100" [cellsToShow]="1" [loop]="false" [autoplay]="true" [dots]="true" >
+
+  <div class=" carousel-cell" *ngFor="let slide of slides"  >
+    <div class="carouselText">
+      <div class="carouselInnerText">{{slide.Text}}</div>
+
+    </div>
+    <img class="carouselImg" src="http://localhost:1337{{slide.Image.formats.large.url}}" width="auto" height="auto" style="object-fit: cover;">
+</div>
+
+</carousel>
+
+
