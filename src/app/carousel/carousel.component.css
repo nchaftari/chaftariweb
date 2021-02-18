@@ -92,3 +92,18 @@
 @media screen and (max-width:990px){
   .product-grid{ margin: 0 0 30px; }
 }
+.carousel-cell
+{
+  border-radius: 0.5rem;
+}
+.product-grid
+{
+  border-radius: 0.5rem !important;
+}
+.product-content
+{
+  border-radius: 0.5rem !important;
+}
+
+
+

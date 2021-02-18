@@ -2,13 +2,13 @@
     [images]="images">
 </carousel> -->
 
-<carousel id="productCarousel" [height]="500"  [cellWidth]="300" [cellsToShow]="5"  [lightDOM]="true" style="margin-top: 2rem;">
+<carousel id="productCarousel" [height]="300"  [cellWidth]="300" [loop]="true"  style="margin-top: 2rem;">
   <div class=" carousel-cell" *ngFor="let product of products">
     <div class="product-grid">
         <div class="product-image">
             <a href="#" class="image">
                 <img class="pic-1" src="http://localhost:1337{{product.productImage[0].formats.thumbnail.url}}">
-                <img class="pic-2" src="http://localhost:1337{{product.productImage[0].formats.thumbnail.url}}">
+                <img class="pic-2" src="http://localhost:1337{{product.productImage[1].formats.thumbnail.url}}">
             </a>
             <a href="" class="product-like-icon"><i class="far fa-heart"></i></a>
             <ul class="product-links">
@@ -19,8 +19,9 @@
             </ul>
         </div>
         <div class="product-content">
-            <h3 class="title"><a href="#">Women's Shirt Top</a></h3>
-            <div class="price">$66.90</div>
+            <h3 class="title"><a href="#">{{product.productName}}</a></h3>
+            <h6 class="">{{product.productDescription}}</h6>
+            <div class="price">${{product.productPrice}}</div>
         </div>
     </div>
 </div>

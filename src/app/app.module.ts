@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingCarouselComponent } from './landing-carousel/landing-carousel.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LandingCarouselComponent } from './landing-carousel/landing-carousel.co
     FooterComponent,
     ProductComponent,
     CarouselComponent,
-    LandingCarouselComponent
+    LandingCarouselComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

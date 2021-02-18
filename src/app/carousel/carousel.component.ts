@@ -38,6 +38,7 @@ export class CarouselComponent implements OnInit {
       (<HTMLImageElement>(
         document.getElementById('productCarousel')
       )).style.display = 'block';
+      console.log(this.products[0].productImage[0].formats.thumbnail.url)
     } catch (error) {
       // this.error = error;
     }
