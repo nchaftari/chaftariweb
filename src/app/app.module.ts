@@ -13,6 +13,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingCarouselComponent } from './landing-carousel/landing-carousel.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
+import { ShopComponent } from './shop/shop.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.componen
     CarouselComponent,
     LandingCarouselComponent,
     HomeComponent,
-    WelcomeBannerComponent
+    WelcomeBannerComponent,
+    ShopComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
