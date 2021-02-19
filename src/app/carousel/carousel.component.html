@@ -2,7 +2,7 @@
     [images]="images">
 </carousel> -->
 
-<carousel id="productCarousel" [height]="300"  [cellWidth]="300" [loop]="true"  style="margin-top: 2rem;">
+<carousel id="productCarousel" [height]="400"  [cellWidth]="300" [loop]="true"  style="margin-top: 2rem;">
   <div class=" carousel-cell" *ngFor="let product of products">
     <div class="product-grid">
         <div class="product-image">
@@ -11,16 +11,32 @@
                 <img class="pic-2" src="http://localhost:1337{{product.productImage[1].formats.thumbnail.url}}">
             </a>
             <a href="" class="product-like-icon"><i class="far fa-heart"></i></a>
+            <ul class="product-links product-colors-links">
+              <li><div class="productColors row" >
+                <div class="productColor" *ngIf="product.Red"  style="background-color: red;"></div>
+                <div class="productColor" *ngIf="product.Black"  style="background-color: black;"></div>
+                <div class="productColor" *ngIf="product.Blue"  style="background-color: blue;"></div>
+                <div class="productColor" *ngIf="product.Brown"  style="background-color: brown;"></div>
+                <div class="productColor" *ngIf="product.White"  style="    background: white;
+                border-color: #6b6b6b !important;
+                border-width: 1px;
+                border-style: solid;"></div>
+              </div></li>
+
+            </ul>
             <ul class="product-links">
                 <li><a href="#"><fa-icon [icon]="faHeart"></fa-icon></a></li>
                 <li><a href="#"><fa-icon [icon]="faRandom"></fa-icon></a></li>
                 <li><a href="#"><fa-icon [icon]="faEye"></fa-icon></a></li>
                 <li><a href="#"><fa-icon [icon]="faShoppingCart"></fa-icon></a></li>
+
             </ul>
+
         </div>
         <div class="product-content">
             <h3 class="title"><a href="#">{{product.productName}}</a></h3>
             <h6 class="">{{product.productDescription}}</h6>
+
             <div class="price">${{product.productPrice}}</div>
         </div>
     </div>

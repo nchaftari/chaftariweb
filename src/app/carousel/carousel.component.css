@@ -104,6 +104,24 @@
 {
   border-radius: 0.5rem !important;
 }
+.productColors
+{
+  margin: auto;
+  width: fit-content;
+}
 
+.productColor
+{
+  background-color: black;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.3rem;
 
+}
+.product-colors-links
+{
+  position: relative !important;
+  margin-top: 2rem !important;
 
+}
