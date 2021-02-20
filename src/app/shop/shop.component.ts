@@ -16,7 +16,6 @@ export class ShopComponent implements OnInit {
     this.categories.push("1");
     this.categories.push("2");
 
-
   }
   show()
   {
