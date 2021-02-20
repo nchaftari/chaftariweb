@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   faEye,
   faHeart,
@@ -13,6 +13,9 @@ import axios from 'axios';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+
+  @Input() category:string;
+
   faHeart = faHeart;
   faRandom = faRandom;
   faEye = faEye;
@@ -22,24 +25,26 @@ export class CarouselComponent implements OnInit {
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = false;
+
   }
 
   public products = [];
 
   async ngOnInit() {
-    axios.get('http://localhost:1337/products').then((response) => {
-      console.log(response);
+    axios.get('http://localhost:1337/categories/'+this.category).then((response) => {
+      console.log(response.data.products[0]);
     });
 
     try {
-      const response = await axios.get('http://localhost:1337/products');
-      this.products = response.data;
+      const response = await axios.get('http://localhost:1337/categories/'+this.category);
+      this.products = response.data.products;
 
       (<HTMLImageElement>(
         document.getElementById('productCarousel')
       )).style.display = 'block';
-      console.log(this.products[0].productImage[0].formats.thumbnail.url)
+      // console.log(this.products[0].productImage[0].formats.thumbnail.url)
     } catch (error) {
+      alert(error);
       // this.error = error;
     }
   }
