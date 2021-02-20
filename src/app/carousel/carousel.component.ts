@@ -31,21 +31,37 @@ export class CarouselComponent implements OnInit {
   public products = [];
 
   async ngOnInit() {
-    axios.get('http://localhost:1337/categories/'+this.category).then((response) => {
-      console.log(response.data.products[0]);
-    });
 
+    // axios.get('http://localhost:1337/categories/'+this.category).then((response) => {
+    //   console.log(response.data.products[0]);
+    // });
+
+    await this.getApi()
+
+//     setTimeout(()=>{
+//  }, 5000);
+  }
+
+
+ async getApi():Promise<boolean>
+  {
     try {
       const response = await axios.get('http://localhost:1337/categories/'+this.category);
       this.products = response.data.products;
-
+      console.log(this.category);
       (<HTMLImageElement>(
-        document.getElementById('productCarousel')
+        document.getElementById(this.category)
       )).style.display = 'block';
+      return true;
+
+
       // console.log(this.products[0].productImage[0].formats.thumbnail.url)
     } catch (error) {
       alert(error);
+      return false;
+
       // this.error = error;
     }
   }
+
 }

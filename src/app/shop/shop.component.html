@@ -1,1 +1,42 @@
-<p>shop works!</p>
+<nav class="navbar navbar-expand navbar-dark bg-primary" (click)="toggleMenu()" > <a id="menu-toggle"
+    class="navbar-brand"><span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
+    aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <!-- <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"> <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="">Link</a> </li>
+    </ul>
+    <form class="form-inline my-2 my-md-0"> </form>
+  </div> -->
+</nav>
+<div id="wrapper" class="toggled">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper" class="borderRadiusSide">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">  Categories  </li>
+      <li (click)="show()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+      <li (click)="toggleMenu()"> <a >Dashboard</a> </li>
+    </ul>
+  </div> <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <ul>
+        <li *ngFor="let category of categories">
+          <app-carousel category="{{category}}"></app-carousel>
+        </li>
+      </ul>
+
+      <hr>
+      <!-- <app-carousel category="2" ></app-carousel> -->
+
+    </div>
+  </div> <!-- /#page-content-wrapper -->
+</div> <!-- /#wrapper -->
+
