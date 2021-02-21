@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "bootstrap";
 
 * {
   font-family:'Times New Roman', Times, serif /* Replace with your custom font */, sans-serif !important;

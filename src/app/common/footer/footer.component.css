@@ -1,18 +1,18 @@
 footer {
   /* position :absolute; */
-  background-color: transparent !important;
+  background-color: rgb(35 38 132)!important;
   bottom : 0;
   width: 100%;
   color: white;
   z-index: 100000000;
   /* bottom: 0; */
-  position: fixed;
+  /* position: fixed; */
 
 }
 @media(min-width:768px) {
   footer {
   /* position :absolute; */
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
   bottom : 0;
   width: 100%;
   color: white;
@@ -27,6 +27,6 @@ footer {
 .footerChaftari
 {
   background-color: rgb(35 38 132)!important;
-  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  /* border-radius: 0.8rem 0.8rem 0rem 0rem; */
 
 }

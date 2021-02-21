@@ -1,21 +1,24 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <nav class="navbar navbar-expand-lg navbar-dark borderRadius stayOnTop" >
   <a class="navbar-brand" href="/home">CHAFTARI</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" data-toggle="collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" id="homeIndicator" routerLinkActive="active">
+      <li class="nav-item " id="homeIndicator" routerLinkActive="active" (click)="toggleNavbar()">
         <a class="nav-link" [routerLink]="['home']" >Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item" id="shopIndicator" routerLinkActive="active">
+      <li class="nav-item" id="shopIndicator" routerLinkActive="active" (click)="toggleNavbar()">
         <a class="nav-link" [routerLink]="['shop']">Shop </a>
       </li>
-      <li class="nav-item" id="aboutIndicator" routerLinkActive="active">
+      <li class="nav-item" id="aboutIndicator" routerLinkActive="active" (click)="toggleNavbar()">
         <a class="nav-link" [routerLink]="['about']">About</a>
       </li>
-      <li class="nav-item" id="contactIndicator" routerLinkActive="active">
+      <li class="nav-item" id="contactIndicator" routerLinkActive="active" (click)="toggleNavbar()">
         <a class="nav-link" [routerLink]="['contact']">Contact</a>
       </li>
       <li class="nav-item dropdown">
@@ -39,3 +42,5 @@
     </form>
   </div>
 </nav>
+
+
