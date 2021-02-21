@@ -1,7 +1,9 @@
 .product-grid{
-  background-color: #fff;
+  background-color: #ecebeb;
   font-family: 'Lato', sans-serif;
   text-align: center;
+  margin: 0.5rem;
+  box-shadow:0px 0px 10px 1px rgb(0 0 0 / 19%);
 }
 .product-grid .product-image{ position: relative; }
 .product-grid .product-image a.image{ display: block; }
@@ -66,7 +68,7 @@
   background: #dd0059;
 }
 .product-grid .product-content{
-  background-color: #fff;
+  background-color: #ecebeb;
   padding: 10px 10px 10px;
   position: relative;
   z-index: 1;
