@@ -533,3 +533,7 @@ background: none;
   list-style: none;
   padding: 0;
 }
+.container-fluid
+{
+  padding-top: 2rem ;
+}

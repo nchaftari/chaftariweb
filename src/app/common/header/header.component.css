@@ -6,18 +6,20 @@ header{
   z-index: 9999;
   position: absolute;
 }
-.brandColor
+.brandTitle
 {
   color: #0000c5;
-  font-weight: 500;
+  font-weight: 600;
+  font-family:'Times New Roman', Times, serif;
 }
 .stayOnTop
 {
   z-index: 10001;
   position:sticky;
   top: 0;
-  background-color:rgb(220 220 220);
-  box-shadow:0px 2px 12px 6px rgb(0 0 0 / 29%);
+  /* background-color:rgb(220 220 220); */
+  background-color: white;
+  box-shadow:0 1px 10px 2px rgb(0 0 0 / 19%);
 }
 /* Icon 1 */
 
@@ -187,4 +189,21 @@ header{
   transform: rotate(-45deg);
   top: 21px;
   left: 8px;
+  }
+
+
+  .chColor
+  {
+    color: #0000c5;
+    border-color: #0000c5;
+  }
+  .btn-outline-primary:hover
+  {
+    background-color: #0000c5af;
+    color: #ffffff;
+  }
+  .btn-outline-primary
+  {
+    /* background-color: #0000c579; */
+    /* border-color: #0000c5; */
   }
