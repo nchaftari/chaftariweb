@@ -52,9 +52,14 @@
 }
  .product-links li a:hover{
   color: #fff;
-  background: #dd0059;
+  background: #0000c542;
+  border-radius: 50%;
 }
 .mb-4
 {
   margin-bottom: 2.5rem !important;
+}
+.fa-color
+{
+  color: #0000c5;
 }

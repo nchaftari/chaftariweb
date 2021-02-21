@@ -6,12 +6,17 @@ header{
   z-index: 9999;
   position: absolute;
 }
+.brandColor
+{
+  color: #0000c5;
+  font-weight: 500;
+}
 .stayOnTop
 {
   z-index: 10001;
   position:sticky;
   top: 0;
-  background-color:rgb(35 38 132) ;
+  background-color:rgb(220 220 220);
   box-shadow:0px 2px 12px 6px rgb(0 0 0 / 29%);
 }
 /* Icon 1 */
