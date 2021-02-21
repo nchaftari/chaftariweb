@@ -16,6 +16,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { WelcomeBannerComponent } from './components/welcome-banner/welcome-banner.component';
+import { ProductCategoryComponent } from './components/product-category/product-category.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { WelcomeBannerComponent } from './components/welcome-banner/welcome-bann
     WelcomeBannerComponent,
     ShopComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ProductCategoryComponent
   ],
   imports: [
     BrowserModule,

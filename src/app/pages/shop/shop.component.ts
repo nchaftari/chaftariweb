@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-shop',
@@ -10,19 +11,41 @@ export class ShopComponent implements OnInit {
   constructor() { }
 
   categories=[];
+  categoriesId=[];
 
 
-  ngOnInit(): void {
-    this.categories.push("1");
-    this.categories.push("2");
+  async ngOnInit() {
+    await this.getApi();
+
+
+    this.categoriesId.push(this.categories)
+    // this.categories.push("1");
+    // this.categories.push("2");
+
 
   }
-  show()
+
+  async getApi():Promise<boolean>
   {
-    (<HTMLImageElement>(
-      document.getElementById("productS")
-    )).style.display = 'block';
+    try {
+      const response = await axios.get('http://localhost:1337/categories/');
+      this.categories = response.data;
+      // this.categoriesId=response.data.categories;
+      console.log(this.categories);
+      // (<HTMLImageElement>(
+      //   document.getElementById(this.category)
+      // )).style.display = 'block';
+      return true;
+
+      // console.log(this.products[0].productImage[0].formats.thumbnail.url)
+    } catch (error) {
+      alert(error);
+      return false;
+
+      // this.error = error;
+    }
   }
+
   toggleMenu()
   {
     (<HTMLInputElement>document.getElementById("wrapper")).classList.toggle("toggled");

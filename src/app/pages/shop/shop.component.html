@@ -29,7 +29,9 @@
     <div class="container-fluid">
       <ul class="carouselList">
         <li  *ngFor="let category of categories">
-          <app-carousel category="{{category}}"></app-carousel>
+          <!-- <app-carousel category="{{category.id}}"></app-carousel> -->
+          <app-product-category category={{category.Title}} categoryId={{category.id}}></app-product-category>
+
         </li>
       </ul>
 
