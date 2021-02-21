@@ -7,7 +7,6 @@ footer {
   z-index: 100000000;
   /* bottom: 0; */
   /* position: fixed; */
-
 }
 @media(min-width:768px) {
   footer {
@@ -20,13 +19,24 @@ footer {
   /* bottom: 0;
   position: absolute; */
   position:unset !important;
+  text-align: left !important;
+
 
 
 }
+
 }
 .footerChaftari
 {
   background-color: rgb(35 38 132)!important;
   /* border-radius: 0.8rem 0.8rem 0rem 0rem; */
 
+}
+.text-white
+{
+  color: white !important;
+}
+.footerTitle
+{
+  margin-top: 2.5rem;
 }

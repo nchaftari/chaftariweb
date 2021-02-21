@@ -12,41 +12,46 @@
     <div class="row">
       <!--Grid column-->
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Footer Content</h5>
+        <h5 class="text-uppercase footerTitle">Contact Us</h5>
 
-        <p>
-          Lorem ipsum dolor
-        </p>
+        <app-socials></app-socials>
       </div>
       <!--Grid column-->
 
       <!--Grid column-->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase footerTitle">Categories</h5>
 
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
+        <ul class="list-unstyled mb-0 ">
+          <li class="nav-item  " id="homeIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['home']" >Home <span class="sr-only">(current)</span></a>
           </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
+          <li class="nav-item" id="shopIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['shop']">Shop </a>
           </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
+          <li class="nav-item" id="aboutIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['about']">About</a>
           </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
+          <li class="nav-item" id="contactIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['contact']">Contact</a>
           </li>
         </ul>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Links</h5>
+        <h5 class="text-uppercase footerTitle">Links</h5>
 
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
+        <ul class="list-unstyled mb-0 ">
+          <li class="nav-item  " id="homeIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['home']" >Home <span class="sr-only">(current)</span></a>
           </li>
-          <li>
+          <li class="nav-item" id="shopIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['shop']">Shop </a>
+          </li>
+          <li class="nav-item" id="aboutIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['about']">About</a>
+          </li>
+          <li class="nav-item" id="contactIndicator" routerLinkActive="active" >
+            <a class="nav-link text-white" [routerLink]="['contact']">Contact</a>
+          </li>
+        </ul>
+      </div>
