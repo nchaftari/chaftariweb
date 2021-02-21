@@ -18,7 +18,14 @@ export class ShopComponent implements OnInit {
     await this.getApi();
 
 
-    this.categoriesId.push(this.categories)
+    this.categoriesId.push(this.categories);
+
+    setTimeout(() =>
+    {
+        this.toggleMenu();
+    },
+    1000);
+
     // this.categories.push("1");
     // this.categories.push("2");
 
@@ -45,6 +52,10 @@ export class ShopComponent implements OnInit {
       // this.error = error;
     }
   }
+
+   delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
 
   toggleMenu()
   {
