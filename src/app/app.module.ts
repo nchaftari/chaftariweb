@@ -2,20 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FooterComponent } from './footer/footer.component';
-import { ProductComponent } from './product/product.component';
-import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { ProductComponent } from './components/product/product.component';
+import { HeaderComponent } from './common/header/header.component';
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LandingCarouselComponent } from './landing-carousel/landing-carousel.component';
-import { HomeComponent } from './home/home.component';
-import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
-import { ShopComponent } from './shop/shop.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+import { LandingCarouselComponent } from './components/landing-carousel/landing-carousel.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { WelcomeBannerComponent } from './components/welcome-banner/welcome-banner.component';
 
 
 @NgModule({
