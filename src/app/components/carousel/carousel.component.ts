@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   faEye,
   faHeart,
@@ -20,7 +21,7 @@ export class CarouselComponent implements OnInit {
   faRandom = faRandom;
   faEye = faEye;
   faShoppingCart = faShoppingCart;
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig,public router:Router) {
     config.interval = 2000;
     config.wrap = true;
     config.keyboard = false;
@@ -29,6 +30,7 @@ export class CarouselComponent implements OnInit {
   }
 
   public products = [];
+  prod=this.products;
 
   async ngOnInit() {
 
@@ -46,9 +48,11 @@ export class CarouselComponent implements OnInit {
  async getApi():Promise<boolean>
   {
     try {
-      const response = await axios.get('http://localhost:1337/categories/'+this.category);
-      this.products = response.data.products;
-      console.log(this.category);
+      const response = await axios.get('http://localhost:1337/products/?categories='+this.category);
+      this.products = response.data;
+
+      console.log("category"+this.category);
+      console.log(response);
       (<HTMLImageElement>(
         document.getElementById(this.category)
       )).style.display = 'block';
@@ -62,5 +66,11 @@ export class CarouselComponent implements OnInit {
       // this.error = error;
     }
   }
+
+  // openProductPage()
+  // {
+  //   // product=this.category.2
+  //   this.router.navigate(["/product-page"],{state:{product: this.products[1]}})
+  // }
 
 }

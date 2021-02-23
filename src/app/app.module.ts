@@ -18,6 +18,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { WelcomeBannerComponent } from './components/welcome-banner/welcome-banner.component';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { SocialsComponent } from './socials/socials.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SocialsComponent } from './socials/socials.component';
     AboutComponent,
     ContactComponent,
     ProductCategoryComponent,
-    SocialsComponent
+    SocialsComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

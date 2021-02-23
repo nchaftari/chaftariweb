@@ -26,6 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^9.0.2",
+    "@types/jquery": "^3.5.5",
     "angular-responsive-carousel": "^2.0.2",
     "angular-social-links": "0.0.23",
     "axios": "^0.21.1",

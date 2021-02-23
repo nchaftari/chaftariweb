@@ -13,6 +13,11 @@
             <a href="" class="product-like-icon"><i class="far fa-heart"></i></a>
             <ul class="product-links product-colors-links">
               <li><div class="productColors row" >
+                <!-- <ul>
+                  <li *ngFor="let col of product.colors">
+                    <div class="productColor" *ngIf="product.Red"  style="background-color: red;">{{col.color}}</div>
+                  </li>
+                </ul> -->
                 <div class="productColor" *ngIf="product.Red"  style="background-color: red;"></div>
                 <div class="productColor" *ngIf="product.Black"  style="background-color: black;"></div>
                 <div class="productColor" *ngIf="product.Blue"  style="background-color: blue;"></div>
@@ -34,7 +39,8 @@
 
         </div>
         <div class="product-content">
-            <h3 class="title"><a >{{product.productName}}</a></h3>
+
+            <h3 class="title" [routerLink]="['/product-page']" [queryParams]="{ product:product |json }"><a >{{product.productName}}</a></h3>
             <h6 class="">{{product.productDescription}}</h6>
 
             <div class="price">${{product.productPrice}}</div>
