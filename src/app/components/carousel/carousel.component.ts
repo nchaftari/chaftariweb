@@ -30,6 +30,7 @@ export class CarouselComponent implements OnInit {
   }
 
   public products = [];
+  productColors=[];
   prod=this.products;
 
   async ngOnInit() {
@@ -40,10 +41,35 @@ export class CarouselComponent implements OnInit {
 
     await this.getApi()
 
+    // await this.setColors();
+
+    // this.products.forEach(element => {
+    //    this.productColors=element.colors;
+    // });
+
 //     setTimeout(()=>{
 //  }, 5000);
   }
 
+  setColors()
+  {
+    // var colors=JSON.parse(this.prod)
+    this.products.forEach(product => {
+      this.productColors=product.colors;
+      this.productColors.forEach(element => {
+        console.log(element.color);
+        console.log("productColorItem"+element.color+product.id+this.category);
+
+        (<HTMLInputElement>document.getElementById("productColorItem"+element.color+product.id+this.category)).style.backgroundColor=element.color;
+   });
+
+
+      });
+
+
+
+
+  }
 
  async getApi():Promise<boolean>
   {
@@ -56,6 +82,7 @@ export class CarouselComponent implements OnInit {
       (<HTMLImageElement>(
         document.getElementById(this.category)
       )).style.display = 'block';
+
       return true;
 
       // console.log(this.products[0].productImage[0].formats.thumbnail.url)
@@ -65,6 +92,7 @@ export class CarouselComponent implements OnInit {
 
       // this.error = error;
     }
+
   }
 
   // openProductPage()

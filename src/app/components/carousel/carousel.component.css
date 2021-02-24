@@ -127,9 +127,9 @@
   margin-top: 2rem !important;
 
 }
-.red
+.productred
 {
-  background-color: black;
+  background-color: rgb(255, 0, 0);
   border-radius: 50%;
   width: 1rem;
   height: 1rem;

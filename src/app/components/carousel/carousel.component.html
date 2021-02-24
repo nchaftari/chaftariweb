@@ -4,7 +4,7 @@
 
 <carousel [attr.id]="category" [height]="400"  [cellWidth]="300" [loop]="true"  style="margin-top: 2rem;">
   <div class=" carousel-cell" *ngFor="let product of products">
-    <div class="product-grid">
+    <div class="product-grid" (mouseover)="setColors()">
         <div class="product-image">
             <a class="image">
                 <img class="pic-1" src="http://localhost:1337{{product.productImage[0].formats.thumbnail.url}}">
@@ -12,21 +12,18 @@
             </a>
             <a href="" class="product-like-icon"><i class="far fa-heart"></i></a>
             <ul class="product-links product-colors-links">
-              <li><div class="productColors row" >
-                <!-- <ul>
-                  <li *ngFor="let col of product.colors">
-                    <div class="productColor" *ngIf="product.Red"  style="background-color: red;">{{col.color}}</div>
-                  </li>
-                </ul> -->
-                <div class="productColor" *ngIf="product.Red"  style="background-color: red;"></div>
-                <div class="productColor" *ngIf="product.Black"  style="background-color: black;"></div>
-                <div class="productColor" *ngIf="product.Blue"  style="background-color: blue;"></div>
-                <div class="productColor" *ngIf="product.Brown"  style="background-color: brown;"></div>
-                <div class="productColor" *ngIf="product.White"  style="    background: white;
+              <li *ngFor="let col of product.colors">
+                <div class="productColor " id="productColorItem{{col.color}}{{product.id}}{{category}}"  ></div>
+              </li>
+
+                <!-- <div class="productColor" *ngIf="product.Red"  style="background-color: red;"></div> -->
+                <!-- <div class="productColor" *ngIf="product.Black"  style="background-color: black;"></div> -->
+                <!-- <div class="productColor" *ngIf="product.Blue"  style="background-color: blue;"></div> -->
+                <!-- <div class="productColor" *ngIf="product.Brown"  style="background-color: brown;"></div> -->
+                <!-- <div class="productColor" *ngIf="product.White"  style="    background: white;
                 border-color: #6b6b6b !important;
                 border-width: 1px;
-                border-style: solid;"></div>
-              </div></li>
+                border-style: solid;"></div> -->
 
             </ul>
             <ul class="product-links">
