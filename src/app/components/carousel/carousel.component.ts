@@ -14,32 +14,29 @@ import axios from 'axios';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
-
-  @Input() category:string;
+  @Input() category: string;
 
   faHeart = faHeart;
   faRandom = faRandom;
   faEye = faEye;
   faShoppingCart = faShoppingCart;
-  constructor(config: NgbCarouselConfig,public router:Router) {
+  constructor(config: NgbCarouselConfig, public router: Router) {
     config.interval = 2000;
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = false;
-
   }
 
   public products = [];
-  productColors=[];
-  prod=this.products;
+  productColors = [];
+  prod = this.products;
 
   async ngOnInit() {
-
     // axios.get('http://localhost:1337/categories/'+this.category).then((response) => {
     //   console.log(response.data.products[0]);
     // });
 
-    await this.getApi()
+    await this.getApi();
 
     // await this.setColors();
 
@@ -47,41 +44,46 @@ export class CarouselComponent implements OnInit {
     //    this.productColors=element.colors;
     // });
 
-//     setTimeout(()=>{
-//  }, 5000);
+    //     setTimeout(()=>{
+    //  }, 5000);
   }
 
-  setColors()
-  {
+  setColors() {
     // var colors=JSON.parse(this.prod)
-    this.products.forEach(product => {
-      this.productColors=product.colors;
-      this.productColors.forEach(element => {
+    this.products.forEach((product) => {
+      this.productColors = product.colors;
+      this.productColors.forEach((element) => {
+        var obj = <HTMLInputElement>(
+          document.getElementById(
+            'productColorItem' + element.color + product.id + this.category
+          )
+        );
         console.log(element.color);
-        console.log("productColorItem"+element.color+product.id+this.category);
+        console.log(
+          'productColorItem' + element.color + product.id + this.category
+        );
+        obj.style.backgroundColor = element.color;
 
-        (<HTMLInputElement>document.getElementById("productColorItem"+element.color+product.id+this.category)).style.backgroundColor=element.color;
-   });
-
-
+        if (obj.style.backgroundColor == 'white') {
+          obj.style.borderColor = '#6b6b6b !important';
+          obj.style.borderWidth = '1px';
+          obj.style.borderStyle = 'solid';
+        }
       });
-
-
-
-
+    });
   }
 
- async getApi():Promise<boolean>
-  {
+  async getApi(): Promise<boolean> {
     try {
-      const response = await axios.get('http://localhost:1337/products/?categories='+this.category);
+      const response = await axios.get(
+        'http://localhost:1337/products/?categories=' + this.category
+      );
       this.products = response.data;
 
-      console.log("category"+this.category);
+      console.log('category' + this.category);
       console.log(response);
-      (<HTMLImageElement>(
-        document.getElementById(this.category)
-      )).style.display = 'block';
+      (<HTMLImageElement>document.getElementById(this.category)).style.display =
+        'block';
 
       return true;
 
@@ -92,7 +94,6 @@ export class CarouselComponent implements OnInit {
 
       // this.error = error;
     }
-
   }
 
   // openProductPage()
@@ -100,5 +101,4 @@ export class CarouselComponent implements OnInit {
   //   // product=this.category.2
   //   this.router.navigate(["/product-page"],{state:{product: this.products[1]}})
   // }
-
 }
