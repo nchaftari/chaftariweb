@@ -19,6 +19,8 @@ import { WelcomeBannerComponent } from './components/welcome-banner/welcome-bann
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { SocialsComponent } from './socials/socials.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
     AppRoutingModule,
     NgbModule,
     IvyCarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

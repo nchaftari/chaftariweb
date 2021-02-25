@@ -30,6 +30,7 @@ export class CarouselComponent implements OnInit {
   public products = [];
   productColors = [];
   prod = this.products;
+  colorsInit=false;
 
   async ngOnInit() {
     // axios.get('http://localhost:1337/categories/'+this.category).then((response) => {
@@ -38,7 +39,7 @@ export class CarouselComponent implements OnInit {
 
     await this.getApi();
 
-    // await this.setColors();
+     this.setColors();
 
     // this.products.forEach(element => {
     //    this.productColors=element.colors;
@@ -49,6 +50,8 @@ export class CarouselComponent implements OnInit {
   }
 
   setColors() {
+    if(!this.colorsInit)
+    {
     // var colors=JSON.parse(this.prod)
     this.products.forEach((product) => {
       this.productColors = product.colors;
@@ -71,6 +74,8 @@ export class CarouselComponent implements OnInit {
         }
       });
     });
+    this.colorsInit=true;
+  }
   }
 
   async getApi(): Promise<boolean> {
