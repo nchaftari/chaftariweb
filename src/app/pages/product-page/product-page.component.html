@@ -60,16 +60,16 @@
 
 
 
-          <form class="d-block justify-content-left">
+          <form class="d-block justify-content-left" id="cartForm">
 
             <div class="inputItemCustom">
               <div class="inputTitle">Color:</div>
             <div class="custom-radios">
               <div *ngFor="let color of product.colors">
-                <input type="radio" id="productColorItem{{color.color}}" name="color" value="{{color.color}}" checked>
+                <input type="radio" id="productColorItem{{color.color}}" name="color" value="{{color.color}}" checked required>
                 <label for="productColorItem{{color.color}}">
                   <span id="productColorItemSpan{{color.color}}">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon"
+                    <img src="../../../assets/check-circle-solid.svg" alt="Checked Icon"
                       class="colorCheckImg" />
                   </span>
                 </label>
@@ -83,7 +83,7 @@
 
             <div class="custom-radios">
               <div *ngFor="let size of product.sizes">
-                <input type="radio" id="productSizeItem{{size.size}}" name="size" value="{{size.size}}" checked>
+                <input type="radio" id="productSizeItem{{size.size}}" name="size" value="{{size.size}}" checked required>
                 <label for="productSizeItem{{size.size}}">
                   <span id="productSizeItemSpan{{size.size}}" style="background-color: lightgray;">
                     {{size.size}}
@@ -94,8 +94,8 @@
           </div>
           <div class="inputItemCustom">
             <div class="inputTitle">Quantity:</div>
-            <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-            <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+            <input type="number" id="formQuantity" value="1" aria-label="Search" class="form-control" style="width: 100px" required>
+            <button class="btn btn-primary btn-md my-0 p" type="submit" (click)="getItem()">Add to cart
               <i class="fas fa-shopping-cart ml-1"></i>
             </button>
           </div>

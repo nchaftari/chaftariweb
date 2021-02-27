@@ -52,6 +52,7 @@
 }
 .custom-radios input[type="radio"]:checked + label span img {
   opacity: 1;
+
 }
 .custom-radios input[type="radio"]:checked + label span  {
   color: blue;
@@ -60,7 +61,10 @@
 
 .colorCheckImg
 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.78rem;
+  /* text-shadow: 0 0 3px #000; */
+
+
 }
 
 .inputTitle
